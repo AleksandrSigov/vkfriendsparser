@@ -48,8 +48,8 @@ public class FriendList {
         int friendsList = friendsNameList.size();
         return friendsList;
 
-        //         for (WebElement nameList : friendsNameList) {
-//            String friendName = nameList.getText();
-//            System.out.println(friendName);
+/*        for (WebElement nameList : friendsNameList) {
+            String friendName = nameList.getText();
+            System.out.println(friendName); */
         }
-}
+    }
