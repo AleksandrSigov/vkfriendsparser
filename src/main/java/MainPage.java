@@ -1,6 +1,5 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
 
@@ -11,8 +10,16 @@ public class MainPage {
     }
 
     private By friendslink = By.xpath("//span[@class='left_label inl_bl'][contains(text(),'Друзья')]");
+    private By myPage = By.xpath("//span[contains(text(),'Моя Страница')]");
+    private By friendsCounter = By.xpath("//div[@class='counts_module']//a[1]");
 
+    // переход в раздел Друзья
     public void friendsClick() {
         driver.findElement(friendslink).click();
+    }
+
+    // смотрит количество друзей
+    public int getNumber() {
+        return Integer.parseInt(driver.findElement(friendsCounter).getText());
     }
 }
